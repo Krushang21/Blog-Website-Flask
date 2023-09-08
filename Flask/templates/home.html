@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>This is a Routed Home page</h1>
+    {% for post in posts %}
+      <h1>{{ post.author }}</h1> <p>posted {{ post.title }} saying {{ post.content }} on {{ post.date }} </p>
+    {% endfor %}
+{% endblock %}
