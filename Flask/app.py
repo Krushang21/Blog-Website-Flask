@@ -25,13 +25,12 @@ def home():
 def about():
     return render_template('about.html', posts=posts)
 @app.route('/Register')
-def Register():
+def register():
     form = registerForm()
-    return render_template('register.html', title='Register to Blog', form=form)
+    return render_template('register.html', form=form)
 @app.route('/login')
 def login():
     form = loginForm()
-    return render_template('login.html', title='Login', form=form)
-
+    return render_template('Login.html', form=form)
 if __name__ == '__main__':
     app.run(debug=True)
